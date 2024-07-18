@@ -1,0 +1,29 @@
+<main>
+  <form class="example-form">
+    <legend>Novo Usuário</legend>
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Digite um Nome" id="nome" name="nome" [(ngModel)]="this.Usuario.Nome">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Digite um Email" id="email" name="email"
+        [(ngModel)]="this.Usuario.Email">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" placeholder="Digite uma Senha" id="senha" name="senha"
+        [(ngModel)]="this.Usuario.Senha">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Confirmar Senha</mat-label>
+      <input matInput type="password" id="confirmarSenha" name="confirmarSenha" [(ngModel)]="this.ConfirmarSenha">
+    </mat-form-field>
+    <div class="pure-controls">
+      <app-btn-enviar (click)="enviar()"></app-btn-enviar>
+      <app-btn-limpar></app-btn-limpar>
+      <app-btn-voltar routerLink=""></app-btn-voltar>
+    </div>
+  </form>
+</main>

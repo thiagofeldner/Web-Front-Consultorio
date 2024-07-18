@@ -1,0 +1,31 @@
+<main>
+  <form class="example-form">
+    <fieldset>
+      <legend>Edição do Paciente</legend>
+      <mat-divider></mat-divider>
+      <mat-form-field class="example-full-width">
+        <mat-label>Código</mat-label>
+        <input matInput id="codigo" name="codigo" disabled [(ngModel)]="this.Paciente.Codigo">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput id="nome" name="nome" [(ngModel)]="this.Paciente.Nome">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Data Nascimento</mat-label>
+        <input matInput [matDatepicker]="picker" id="dtNasc" name="dtNasc"
+          [ngModel]="this.Paciente.DataNascimento"
+          (ngModelChange)="this.Paciente.DataNascimento=$event">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="pure-controls">
+        <app-btn-alterar (click)="enviar()"></app-btn-alterar>
+        <app-btn-excluir (click)="desejaExcluir()"></app-btn-excluir>
+        <app-btn-voltar routerLink="/medicos"></app-btn-voltar>
+      </div>
+    </fieldset>
+  </form>
+</main>
+

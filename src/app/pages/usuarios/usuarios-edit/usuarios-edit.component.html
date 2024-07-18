@@ -1,0 +1,37 @@
+<main>
+  <form class="example-form">
+    <legend>Edição do Usuário</legend>
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput id="id" name="id" disabled [(ngModel)]="this.Usuario.Id">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput id="nome" name="nome" [(ngModel)]="this.Usuario.Nome">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput id="email" name="email" [(ngModel)]="this.Usuario.Email">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Senha</mat-label>
+      <input matInput id="senha" type="password" name="senha" [(ngModel)]="this.Usuario.Senha">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Confirmar Senha</mat-label>
+      <input matInput type="password" id="confirmarSenha" name="confirmarSenha" [(ngModel)]="this.ConfirmarSenha">
+    </mat-form-field>
+
+    <div class="pure-controls">
+      <app-btn-alterar (click)="alterar()"></app-btn-alterar>
+      <app-btn-excluir (click)="desejaExcluir()"></app-btn-excluir>
+      <app-btn-voltar routerLink="/usuarios"></app-btn-voltar>
+    </div>
+  </form>
+</main>
+

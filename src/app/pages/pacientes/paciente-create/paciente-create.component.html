@@ -1,0 +1,29 @@
+<main>
+  <form class="example-form">
+    <fieldset>
+      <legend>Novo Paciente</legend>
+      <mat-divider></mat-divider>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Digite um Nome" id="crm" name="crm" [(ngModel)]="this.Paciente.Nome">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Data Nascimento</mat-label>
+        <input matInput
+          [matDatepicker]="picker"
+          id="dtNasc" name="dtnasc"
+          [ngModel]="this.Paciente.DataNascimento"
+          (ngModelChange)="this.Paciente.DataNascimento=$event"
+        >
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="pure-controls">
+        <app-btn-enviar (click)="enviar()"></app-btn-enviar>
+        <app-btn-limpar></app-btn-limpar>
+        <app-btn-voltar routerLink="/pacientes"></app-btn-voltar>
+      </div>
+    </fieldset>
+  </form>
+</main>

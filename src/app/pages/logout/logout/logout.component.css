@@ -1,0 +1,50 @@
+main{
+  margin: 0 auto;
+  width: 85%;
+}
+
+.container{
+  display: flex;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.title{
+  text-align: center;
+  margin: 24px 0;
+  font-weight: 600;
+}
+
+.nome{
+  margin: 18px auto;
+  font-size: 1.4em;
+}
+
+.card-logout{
+  height: 40vh;
+  width: 25vw;
+  align-items: center;
+  box-shadow: 10px 5px 5px rgba(41, 39, 143, 0.8);
+}
+
+.button{
+  margin: 18px auto;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  margin: 12px 10px 0 10px;
+}
+
+.mat-icon{
+  display: inline;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: .125rem;
+}
+
+

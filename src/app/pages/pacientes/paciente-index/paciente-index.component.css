@@ -1,0 +1,38 @@
+table{
+  margin: 20px auto;
+  width: 75%;
+}
+
+table th{
+  text-align: center;
+}
+
+table td{
+  text-align: center;
+}
+
+table td a {
+  text-decoration: none;
+}
+
+table td a:hover {
+  display: block;
+  font-weight: 900;
+}
+
+example-form {
+  text-align: center;
+}
+
+.example-full-width {
+  margin: 12px 0 0 12px;
+}
+
+.example-form input::placeholder{
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+button {
+  margin: 6px 0 20px 10px;
+}

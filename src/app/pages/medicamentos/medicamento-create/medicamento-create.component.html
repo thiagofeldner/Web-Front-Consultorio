@@ -1,0 +1,45 @@
+<main>
+  <form class="example-form">
+    <fieldset>
+      <legend>Novo Medicamento</legend>
+      <mat-divider></mat-divider>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Digite um Nome" id="nome" name="nome" [(ngModel)]="this.Medicamento.Nome">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Data Fabricação</mat-label>
+        <input matInput
+          [matDatepicker]="picker"
+          id="dtfab" name="dtfab"
+          [ngModel]="this.Medicamento.DataFabricacao"
+          (ngModelChange)="this.Medicamento.DataFabricacao=$event"
+        >
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Data Vencimento</mat-label>
+        <input matInput
+          [matDatepicker]="picker"
+          id="dtvenc" name="dtvenc"
+          [ngModel]="this.Medicamento.DataVencimento"
+          (ngModelChange)="this.Medicamento.DataVencimento=$event"
+        >
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="pure-controls">
+        <app-btn-enviar (click)="enviar()"></app-btn-enviar>
+        <app-btn-limpar></app-btn-limpar>
+        <app-btn-voltar routerLink="/medicamentos"></app-btn-voltar>
+      </div>
+    </fieldset>
+  </form>
+</main>
+
+
+

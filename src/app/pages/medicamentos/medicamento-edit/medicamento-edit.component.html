@@ -1,0 +1,50 @@
+<main>
+  <form class="example-form">
+    <fieldset>
+      <legend>Edição do Medicamento</legend>
+      <mat-divider></mat-divider>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput id="id" name="id" [(ngModel)]="this.Medicamento.Id" disabled>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput id="nome" name="nome" [(ngModel)]="this.Medicamento.Nome">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Data Fabricação</mat-label>
+        <input matInput
+          [matDatepicker]="picker"
+          id="dtFab" name="dtFab"
+          [ngModel]="this.Medicamento.DataFabricacao"
+          (ngModelChange)="this.Medicamento.DataFabricacao=$event"
+        >
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Data Vencimento</mat-label>
+        <input matInput
+          [matDatepicker]="picker1"
+          id="dtVenc" name="dtVenc"
+          [ngModel]="this.Medicamento.DataVencimento"
+          (ngModelChange)="this.Medicamento.DataVencimento=$event">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <div class="pure-controls">
+        <app-btn-alterar (click)="alterar()"></app-btn-alterar>
+        <app-btn-excluir (click)="desejaExcluir()"></app-btn-excluir>
+        <app-btn-voltar routerLink="/medicamentos"></app-btn-voltar>
+      </div>
+    </fieldset>
+  </form>
+</main>
+

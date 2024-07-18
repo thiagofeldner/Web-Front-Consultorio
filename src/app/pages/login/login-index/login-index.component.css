@@ -1,0 +1,29 @@
+h3{
+  text-align: center;
+  font-weight: 400;
+}
+
+.container{
+  display: flex;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-card-title{
+  text-align: center;
+  margin: 20px 0;
+}
+
+.conteudo-login input::placeholder{
+  transition: 1s;
+}
+
+.card-login{
+  width: 300px;
+  box-shadow: 10px 5px 5px rgba(41, 39, 143, 0.8);
+}
+
+button{
+  margin-left: 6px;
+}

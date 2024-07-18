@@ -1,0 +1,27 @@
+<h3>Consultório</h3>
+<main>
+  <mat-card-content class="container">
+    <mat-card class="card-login">
+      <mat-card-title>Login</mat-card-title>
+      <form (ngSubmit)="submit()">
+        <mat-card-content class="conteudo-login">
+          <mat-form-field appearance="outline" class="form-field-full">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Digite seu email" id="email" name="email"
+              [(ngModel)]="this.Login.Email">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="form-field-full">
+            <mat-label>Senha</mat-label>
+            <input matInput type="password" placeholder="Digite sua senha" id="senha" name="senha"
+              [(ngModel)]="this.Login.Senha">
+          </mat-form-field>
+        </mat-card-content>
+      </form>
+      <mat-card-actions align="end">
+        <button mat-flat-button type="submit" (click)="submit()">Entrar</button>
+        <button mat-flat-button class="full" align="end" routerLink="/login/create">Cadastrar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-card-content>
+</main>
+<app-footer></app-footer>
