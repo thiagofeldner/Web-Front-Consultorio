@@ -23,13 +23,13 @@ import { LogoutComponent } from './pages/logout/logout/logout.component';
 const routes: Routes = [
 
   //Login
-  { path: 'login', component: LoginIndexComponent},
+  { path: 'login', component: LoginIndexComponent },
 
   //Login Create
   { path: 'login/create', component: LoginCreateComponent },
 
   {
-    path: '', component: PrincipalComponent, canActivate:[usuarioAutenticadoGuard],
+    path: '', component: PrincipalComponent, canActivateChild:[usuarioAutenticadoGuard],
     children: [
       { path: '', redirectTo:'home', pathMatch: 'full'},
       { path: 'home', component: HomeComponent,},
