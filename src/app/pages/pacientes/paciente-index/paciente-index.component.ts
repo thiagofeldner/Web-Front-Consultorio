@@ -13,7 +13,7 @@ import { AlertComponent } from '../../../shared/dialogs/alert/alert.component';
 })
 export class PacienteIndexComponent {
   Pacientes!:Paciente[];
-  Codigo:string;
+  Codigo:number | null;
   Nome:string;
   DataNascimento: string;
 
@@ -21,7 +21,7 @@ export class PacienteIndexComponent {
 
   constructor(private pacientesService:PacientesService, private dialog:MatDialog){
     this.Pacientes = [];
-    this.Codigo = '';
+    this.Codigo = null;
     this.Nome ='';
     this.DataNascimento = '';
   }
@@ -29,7 +29,7 @@ export class PacienteIndexComponent {
   definirPesquisa(): void{
     this.Pacientes = [];
 
-    if(this.Codigo || this.Codigo == '0'){
+    if(this.Codigo || this.Codigo === 0){
       this.pesquisarPorCodigo();
       return;
     }

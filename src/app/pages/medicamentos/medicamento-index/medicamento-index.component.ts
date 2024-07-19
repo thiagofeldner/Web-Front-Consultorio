@@ -12,21 +12,21 @@ import { MatDialog } from '@angular/material/dialog';
 export class MedicamentoIndexComponent {
 
   Medicamentos: Medicamento[];
-  Id: string;
+  Id: number | null;
   Nome: string;
 
   displayedColumns: string[] = ['Id', 'Nome', 'DataFabricacao', 'DataVencimento'];
 
   constructor(private medicamentosService:MedicamentosService, private dialog: MatDialog){
     this.Medicamentos = [];
-    this.Id = '';
+    this.Id = null;
     this.Nome = '';
   }
 
   definirPesquisa(): void{
     this.Medicamentos = [];
 
-    if (this.Id || this.Id == '0' ) {
+    if (this.Id || this.Id === 0 ) {
       this.pesquisarPorId();
       return;
     }
